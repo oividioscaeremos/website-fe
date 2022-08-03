@@ -1,0 +1,115 @@
+#header {
+    padding: 0;
+    margin: 0;
+    height: 80px;
+    background-color: #28293E;
+    
+    color: #D9D9D9;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 16px;
+}
+
+.header-logo {
+    @media screen and (min-width: 960px) {
+        margin-left: 135px;
+        margin-top: 16px;
+    }
+
+    @media screen and (max-width: 960px) {
+        margin-left: 50px;
+        margin-top: 16px;
+    }
+    
+    height: 48px;
+    width: 170px;
+
+    background-color: #ffffff;
+}
+
+.menu {
+    @media screen and (max-width: 959px) {
+        max-height: 0px;
+        margin-top: 80px;
+        background-color: #28293E;
+        width: 100%;
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    @media screen and (min-width: 960px) {
+        margin-top: 20px;
+        float: right;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &.active {
+        max-height: 999999px;
+
+        animation-duration: 1.5s;
+        transition: height 1.5s ease-in-out;
+
+        ~.menu-burger > .line:nth-child(1) {
+            transform: rotateX(90);
+            transform-origin: 0 0;
+        }
+    }
+
+    ul {
+        display: block;
+        list-style: none;
+
+        @media screen and (min-width: 960px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        > li {
+            margin: 0 25px;
+        
+            @media screen and (max-width: 959px) {
+                margin: 20px 0;
+            }
+
+            @media screen and (min-width: 960px) {
+                float: left;
+            }
+        }
+    }
+}
+
+.menu-burger {
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    float: right;
+    margin-top: 25px;
+
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 20%;
+
+    @media screen and (min-width: 960px) {
+        display: none;
+    }
+
+    @media screen and (max-width: 959px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .line {
+        width: 40%;
+        height: 1px;
+        background-color: #ffffff;
+        margin: 1.5px auto;
+    }
+}
