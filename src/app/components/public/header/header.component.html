@@ -3,18 +3,18 @@
         <div class="col-6 p-0 m-0 h-100">
             <div class="header-logo">Logo Here</div>
         </div>
-        <div class="col-6 h-100 align-items-center">
-            <div class="menu-burger" (click)="toggleMenu()">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <div id="menu" class="menu">
-                <ul>
-                    <li>About Me</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
-                </ul>
+        <div class="col-6 h-100">
+            <ul class="menu">
+                <li>About Me</li>
+                <li class="active">Blog</li>
+                <li>Contact</li>
+            </ul>
+            <div class="d-flex align-items-center justify-content-end">
+                <div class="menu-burger" (click)="toggleMenu()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
             </div>
         </div>
     </div>

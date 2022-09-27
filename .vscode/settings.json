@@ -1,3 +1,5 @@
 {
-    "editor.fontFamily": "FiraCode"
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "400"
 }
